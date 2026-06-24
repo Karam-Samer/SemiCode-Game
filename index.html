@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Egg Game</title>
+    
+    <link rel="stylesheet" href="CSS/plugins/all.min.css">
+    <link rel="stylesheet" href="CSS/plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <script src="JS/plugins/bootstrap.min.js" defer></script>
+    <script src="JS/plugins/jquery.js" defer></script>
+    <script src="JS/function.js" defer></script>
+    <script src="JS/index.js" defer></script>
+
+</head>
+
+<body>
+    <section id="Game">
+        <nav class="text-center py-3 text-white">
+            <h6>
+                Score : <span class="score">0</span> |
+                <span class="text-danger">Life Score</span> : <span id="LifeScore">0</span> |
+                Highest Score : <span id="HighestScore">0</span> |
+                Use Mouse to control
+            </h6>
+        </nav>
+        <div class="chickenContainer mt-3">
+            <div class="chicken">
+                <i class="fa-solid fa-egg"></i>
+                <img src="images/chicken.png" alt="" class="img-fluid">
+            </div>
+
+            <div class="chicken">
+                <i class="fa-solid fa-egg"></i>
+                <img src="images/chicken.png" alt="" class="img-fluid">
+            </div>
+
+            <div class="chicken">
+                <i class="fa-solid fa-egg"></i>
+                <img src="images/chicken.png" alt="" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="brokenContainer mt-3">
+            <div class="brokenEgg">
+                <img src="images/broken.png" alt="" class="img-fluid">
+            </div>
+
+            <div class="brokenEgg">
+                <img src="images/broken.png" alt="" class="img-fluid">
+            </div>
+
+            <div class="brokenEgg">
+                <img src="images/broken.png" alt="" class="img-fluid">
+            </div>
+        </div>
+
+
+        <div class="popup text-center bg-success py-3">
+            <h4 class="text-white">Start Game</h4>
+        </div>
+
+        <div class="basket">
+            <img src="images/basket.png" alt="" class="img-fluid">
+            <h4 class="text-white score">0</h4>
+        </div>
+        <footer>
+            <img src="images/footer.png" alt="" class="img-fluid">
+        </footer>
+    </section>
+</body>
+
+</html>

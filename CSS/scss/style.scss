@@ -1,0 +1,90 @@
+@use "./abstracts" as *;
+
+
+#Game {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#1e528e), color-stop(50%, #728a7c), to(#e9ce5d));
+    background-image: linear-gradient(to bottom, #1e528e 0%, #728a7c 50%, #e9ce5d 100%);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    nav {
+        background-color: indigo;
+    }
+
+    .chickenContainer {
+        position: relative;
+        height: 10%;
+        .chicken {
+            width: 8%;
+            @include position($t: 0, $l: 0);
+            transform: translateX(-50%);
+
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                    left: calc($i * 25%);
+                }
+            }
+
+            img {
+                position: relative;
+            }
+
+            i {
+                @include position($t: 50%, $l: 50%);
+                transform: translate(-50%, -50%);
+                color: #fff;
+            }
+        }
+
+        &::before {
+            @include createEle(100%, 20px);
+            background-color: #333;
+            @include position($b: 0, $l: 0);
+        }
+    }
+
+    .brokenContainer {
+        @include position($b: 25%, $l: 0);
+        width: 100%;
+
+        .brokenEgg {
+            width: 8%;
+            @include position($t: 0, $l: 0);
+            transform: translateX(-50%);
+            display: none;
+
+            img {
+                position: relative;
+            }
+
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                    left: calc($i * 25%);
+                }
+            }
+        }
+    }
+
+    .popup {
+        @include position($t: 50%, $l: 0);
+        transform: translateY(-50%);
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .basket {
+        width: 200px;
+        @include position($b: 25%, $l: 0);
+
+        h4 {
+            @include position($b: 0, $l: 50%);
+            transform: translateX(-50%);
+        }
+    }
+
+    footer {
+        @include position($b: -8%, $l: 0);
+        width: 100%;
+    }
+}
