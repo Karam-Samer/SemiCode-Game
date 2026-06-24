@@ -23,6 +23,14 @@ $(window).mousemove(function (e) {
     }
 });
 
+$(window).touchmove(function (e) {
+    if (e.originalEvent.touches[0].pageX >= halfBasketWidth && e.originalEvent.touches[0].pageX <= $(window).outerWidth(true) - halfBasketWidth) {
+        basket.offset({
+            left: e.originalEvent.touches[0].pageX - halfBasketWidth
+        });
+    }
+});
+
 $('.popup').click(function () {
     $(this).slideUp(1000, function () {
         resetGame();
