@@ -11,6 +11,30 @@
 
     nav {
         background-color: indigo;
+
+        h6 {
+            @include respond(350) {
+                font-size: 10px;
+            }
+
+            @include respond(450) {
+                font-size: 14px;
+            }
+
+            @include respond(650) {
+                font-size: 16px;
+            }
+
+            @include respond(850) {
+                font-size: 18px;
+            }
+
+            @include respond(1050) {
+                font-size: 20px;
+            }
+
+
+        }
     }
 
     .chickenContainer {
@@ -19,12 +43,47 @@
 
         .chicken {
             width: 8%;
+
+            @include respond(350) {
+                width: 18%;
+            }
+
+            @include respond(450) {
+                width: 15%;
+            }
+
+            @include respond(650) {
+                width: 10%;
+            }
+
+            @include respond(850) {
+                width: 8%;
+            }
+
+            @include respond(1050) {
+                width: 7%;
+            }
+
+            @include respond(1200) {
+                width: 6%;
+            }
+
             @include position($t: 0, $l: 0);
             transform: translateX(-50%);
 
             @for $i from 1 through 3 {
                 &:nth-child(#{$i}) {
                     left: calc($i * 25%);
+                }
+            }
+
+            @include respond(350) {
+                &:nth-child(1) {
+                    left: 15%;
+                }
+
+                &:nth-child(3) {
+                    left: 85%;
                 }
             }
 
@@ -52,6 +111,31 @@
 
         .brokenEgg {
             width: 8%;
+
+            @include respond(350) {
+                width: 18%;
+            }
+
+            @include respond(450) {
+                width: 15%;
+            }
+
+            @include respond(650) {
+                width: 10%;
+            }
+
+            @include respond(850) {
+                width: 8%;
+            }
+
+            @include respond(1050) {
+                width: 7%;
+            }
+
+            @include respond(1200) {
+                width: 6%;
+            }
+
             @include position($t: 0, $l: 0);
             transform: translateX(-50%);
             display: none;
@@ -63,6 +147,16 @@
             @for $i from 1 through 3 {
                 &:nth-child(#{$i}) {
                     left: calc($i * 25%);
+                }
+            }
+
+            @include respond(350) {
+                &:nth-child(1) {
+                    left: 15%;
+                }
+
+                &:nth-child(3) {
+                    left: 85%;
                 }
             }
         }
@@ -77,6 +171,20 @@
 
     .basket {
         width: 200px;
+
+        @include respond(350) {
+            width: 100px;
+        }
+
+        @include respond(450) {
+            width: 130px;
+        }
+
+        @include respond(650) {
+            width: 140px;
+        }
+
+
         @include position($b: 25%, $l: 0);
 
         h4 {
@@ -88,27 +196,13 @@
     footer {
         @include position($b: -8%, $l: 0);
         width: 100%;
-    }
-}
 
-.stop {
-    display: none;
-    background-color: #333;
-    color: #fff;
-
-    @include respond(350) {
-        @include position($t: 0, $l: 0);
-        @include flex();
-        @include distance(100%, 100%);
-        z-index: 9999;
-
-        h2 {
-            font-size: 1.5rem;
-            text-align: center;
-            margin: 0;
+        @include respond(350) {
+            bottom: -2%;
         }
-    }
-    @include respond(850) {
-        display: none;
+
+        @include respond(1050) {
+            bottom: -5%;
+        }
     }
 }

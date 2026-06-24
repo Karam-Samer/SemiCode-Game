@@ -8,12 +8,69 @@
 #Game nav {
   background-color: indigo;
 }
+@media (max-width: 1300px) {
+  #Game nav h6 {
+    font-size: 10px;
+  }
+}
+@media (min-width: 371px) and (max-width: 1300px) {
+  #Game nav h6 {
+    font-size: 14px;
+  }
+}
+@media (min-width: 577px) and (max-width: 1300px) {
+  #Game nav h6 {
+    font-size: 16px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  #Game nav h6 {
+    font-size: 18px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  #Game nav h6 {
+    font-size: 20px;
+  }
+}
 #Game .chickenContainer {
   position: relative;
   height: 10%;
 }
 #Game .chickenContainer .chicken {
   width: 8%;
+}
+@media (max-width: 1300px) {
+  #Game .chickenContainer .chicken {
+    width: 18%;
+  }
+}
+@media (min-width: 371px) and (max-width: 1300px) {
+  #Game .chickenContainer .chicken {
+    width: 15%;
+  }
+}
+@media (min-width: 577px) and (max-width: 1300px) {
+  #Game .chickenContainer .chicken {
+    width: 10%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  #Game .chickenContainer .chicken {
+    width: 8%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  #Game .chickenContainer .chicken {
+    width: 7%;
+  }
+}
+@media (min-width: 1181px) and (max-width: 1300px) {
+  #Game .chickenContainer .chicken {
+    width: 6%;
+  }
+}
+#Game .chickenContainer .chicken {
   position: absolute;
   top: 0;
   right: initial;
@@ -29,6 +86,14 @@
 }
 #Game .chickenContainer .chicken:nth-child(3) {
   left: 75%;
+}
+@media (max-width: 1300px) {
+  #Game .chickenContainer .chicken:nth-child(1) {
+    left: 15%;
+  }
+  #Game .chickenContainer .chicken:nth-child(3) {
+    left: 85%;
+  }
 }
 #Game .chickenContainer .chicken img {
   position: relative;
@@ -64,6 +129,38 @@
 }
 #Game .brokenContainer .brokenEgg {
   width: 8%;
+}
+@media (max-width: 1300px) {
+  #Game .brokenContainer .brokenEgg {
+    width: 18%;
+  }
+}
+@media (min-width: 371px) and (max-width: 1300px) {
+  #Game .brokenContainer .brokenEgg {
+    width: 15%;
+  }
+}
+@media (min-width: 577px) and (max-width: 1300px) {
+  #Game .brokenContainer .brokenEgg {
+    width: 10%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  #Game .brokenContainer .brokenEgg {
+    width: 8%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  #Game .brokenContainer .brokenEgg {
+    width: 7%;
+  }
+}
+@media (min-width: 1181px) and (max-width: 1300px) {
+  #Game .brokenContainer .brokenEgg {
+    width: 6%;
+  }
+}
+#Game .brokenContainer .brokenEgg {
   position: absolute;
   top: 0;
   right: initial;
@@ -84,6 +181,14 @@
 #Game .brokenContainer .brokenEgg:nth-child(3) {
   left: 75%;
 }
+@media (max-width: 1300px) {
+  #Game .brokenContainer .brokenEgg:nth-child(1) {
+    left: 15%;
+  }
+  #Game .brokenContainer .brokenEgg:nth-child(3) {
+    left: 85%;
+  }
+}
 #Game .popup {
   position: absolute;
   top: 50%;
@@ -96,6 +201,23 @@
 }
 #Game .basket {
   width: 200px;
+}
+@media (max-width: 1300px) {
+  #Game .basket {
+    width: 100px;
+  }
+}
+@media (min-width: 371px) and (max-width: 1300px) {
+  #Game .basket {
+    width: 130px;
+  }
+}
+@media (min-width: 577px) and (max-width: 1300px) {
+  #Game .basket {
+    width: 140px;
+  }
+}
+#Game .basket {
   position: absolute;
   top: initial;
   right: initial;
@@ -118,36 +240,14 @@
   left: 0;
   width: 100%;
 }
-
-.stop {
-  display: none;
-  background-color: #333;
-  color: #fff;
-}
 @media (max-width: 1300px) {
-  .stop {
-    position: absolute;
-    top: 0;
-    right: initial;
-    bottom: initial;
-    left: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-  }
-  .stop h2 {
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 0;
+  #Game footer {
+    bottom: -2%;
   }
 }
-@media (min-width: 769px) and (max-width: 1300px) {
-  .stop {
-    display: none;
+@media (min-width: 992px) and (max-width: 1300px) {
+  #Game footer {
+    bottom: -5%;
   }
 }
 
