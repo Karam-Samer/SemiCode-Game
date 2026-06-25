@@ -109,6 +109,10 @@
         @include position($b: 25%, $l: 0);
         width: 100%;
 
+        @include respond(350) {
+            bottom: 15%;
+        }
+
         .brokenEgg {
             width: 8%;
 
@@ -167,13 +171,18 @@
         transform: translateY(-50%);
         width: 100%;
         cursor: pointer;
+        z-index: 1000;
     }
 
     .basket {
         width: 200px;
 
+        @include position($b: 25%, $l: 0);
+
+
         @include respond(350) {
             width: 100px;
+            bottom: 15%;
         }
 
         @include respond(450) {
@@ -183,9 +192,6 @@
         @include respond(650) {
             width: 140px;
         }
-
-
-        @include position($b: 25%, $l: 0);
 
         h4 {
             @include position($b: 0, $l: 50%);
